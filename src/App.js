@@ -3,6 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import { BrowserRouter } from 'react-router-dom';
 import './App.scss';
 import MainComponent from './components/MainComponent';
+import './styles/styles.scss';
 
 const darkTheme = createTheme({
 	palette: {
