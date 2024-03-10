@@ -57,14 +57,18 @@ export default function MainComponent() {
 		}),
 	}));
 
-	const DrawerHeader = styled('div')(({ theme }) => ({
-		display: 'flex',
-		alignItems: 'center',
-		padding: theme.spacing(0, 1),
-		// necessary for content to be below app bar
-		...theme.mixins.toolbar,
-		justifyContent: 'flex-end',
-	}));
+	const DrawerHeader = styled('div')(({ theme }) => {
+		console.log(theme.mixins.toolbar);
+		return {
+			display: 'flex',
+			alignItems: 'center',
+			padding: theme.spacing(0, 1),
+			// necessary for content to be below app bar
+			// ...theme.mixins.toolbar,
+			minHeight: '45vh',
+			justifyContent: 'flex-end',
+		};
+	});
 
 	const handleSideNavClick = (val) => {
 		setShowSideNav(val);
@@ -73,7 +77,10 @@ export default function MainComponent() {
 	return (
 		<Box sx={{ display: 'flex' }}>
 			<CssBaseline />
-			<AppBar position='fixed' open={showSideNav}>
+			<AppBar
+				position='fixed'
+				open={showSideNav}
+				className='header-height'>
 				<Header
 					handleSideNavClick={handleSideNavClick}
 					open={showSideNav}
@@ -85,7 +92,7 @@ export default function MainComponent() {
 				open={showSideNav}
 				handleSideNavClick={handleSideNavClick}
 			/>
-			<Main open={showSideNav}>
+			<Main open={showSideNav} className='main-component-height'>
 				<DrawerHeader />
 				<Routes>
 					<Route path='/' element={<Dashboard />} />

@@ -23,7 +23,7 @@ export default function Header(props) {
 	const { handleSideNavClick, open, totalRevenue, totalValue } = props;
 
 	return (
-		<div className='header-container'>
+		<div className='header-container' id='header-container'>
 			<Grid
 				container
 				spacing={1}
