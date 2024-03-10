@@ -2,7 +2,7 @@ import MuiAppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import { styled } from '@mui/material/styles';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { DRAWER_WIDTH } from '../constants/sideNavConstants';
 import Header from './header/Header';
@@ -14,6 +14,12 @@ import SideNav from './side-navigation/SideNav';
 
 export default function MainComponent() {
 	const [showSideNav, setShowSideNav] = useState(false);
+	const [totalRevenue, setTotalRevenue] = useState(0);
+	const [totalValue, setTotalValue] = useState('$136,841');
+
+	useEffect(() => {
+		// TO DO: Set the total revenue and total value here
+	}, []);
 
 	const Main = styled('main', {
 		shouldForwardProp: (prop) => prop !== 'open',
@@ -71,6 +77,8 @@ export default function MainComponent() {
 				<Header
 					handleSideNavClick={handleSideNavClick}
 					open={showSideNav}
+					totalRevenue={totalRevenue}
+					totalValue={totalValue}
 				/>
 			</AppBar>
 			<SideNav
