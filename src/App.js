@@ -9,15 +9,6 @@ const darkTheme = createTheme({
 	palette: {
 		mode: 'dark',
 	},
-	// components: {
-	// 	MuiTypography: {
-	// 		defaultProps: {
-	// 			variantMapping: {
-	// 				h4Grey: 'h4',
-	// 			},
-	// 		},
-	// 	},
-	// },
 	typography: {
 		fontSize: 12,
 		fontFamily: 'Courier Prime',
