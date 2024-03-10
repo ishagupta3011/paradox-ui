@@ -106,7 +106,7 @@ export default function YieldFarmingA() {
 	};
 
 	const handleRecentItemSelection = (value) => {
-		selectedRecentItem(value);
+		setSelectedRecentItem(value);
 	};
 
 	const handleBundleClick = () => {};

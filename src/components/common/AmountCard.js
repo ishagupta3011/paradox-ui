@@ -3,10 +3,10 @@ import Chip from '@mui/material/Chip';
 import React from 'react';
 
 export default function AmountCard(props) {
-	const { amount, balance, tagName, showChip, chipLabel } = props;
+	const { amount, balance, tagName, showChip, chipLabel, isOutline=true } = props;
 
 	return (
-		<div className='black-gradient-card'>
+		<div className={`black-gradient-card ${isOutline && 'white-outline'}`}>
 			<div className='app-flex justify-content-space-between mb-0-5'>
 				<Typography variant='overline'>Amount</Typography>
 				<Typography variant='overline'>

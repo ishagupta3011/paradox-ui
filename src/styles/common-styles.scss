@@ -119,6 +119,10 @@
 	margin-bottom: 1.5rem !important;
 }
 
+.mb-6{
+	margin-bottom: 4rem !important;
+}
+
 .mt-1 {
 	margin-top: 0.5 !important;
 }
@@ -210,7 +214,6 @@
 
 .black-gradient-card {
 	border-radius: 25px;
-	border: 2px solid #ffffff;
 	padding: 1rem;
 	background: rgb(0, 0, 0);
 	background: linear-gradient(
@@ -222,6 +225,12 @@
 	);
 }
 
+.white-outline{
+	border: 2px solid #ffffff;
+}
+.justify-content-around{
+	justify-content: space-around;
+}
 .mid-grey-card {
 	background-color: #343434;
 	border: 5px transparent;

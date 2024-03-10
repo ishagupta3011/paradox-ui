@@ -36,12 +36,14 @@ export default function ValueCard(props) {
 				)}
 				{showOnlyProgressBar && <ProgressBar progress={progress} />}
 				{showAmountAndProgressBar && (
-					<div className='app-flex justify-content-space-between'>
-						<Typography variant='h4Light'>
+					<div className='app-flex justify-content-space-between gap-2'>
+						<Typography variant='h4Light' className='w-40'>
 							{'$'}
 							{amount}
 						</Typography>
+						<div className='w-60'>
 						<ProgressBar progress={progress} />
+						</div>
 					</div>
 				)}
 				{showAmountLabels && (

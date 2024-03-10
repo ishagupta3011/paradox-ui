@@ -72,6 +72,14 @@ const darkTheme = createTheme({
 				fontSize: '0.875rem',
 			},
 		},
+		h5Grey: {
+			fontSize: '1.25rem',
+			color: '#d2d2d2',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '0.875rem',
+			},
+		},
 		body2: {
 			fontSize: '1.5rem',
 			margin: 0,
