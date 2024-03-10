@@ -40,7 +40,6 @@ const darkTheme = createTheme({
 		},
 		h4: {
 			fontSize: '1.675rem',
-			letterSpacing: '0.175rem',
 			fontWeight: 600,
 			color: '#ffffff',
 			margin: 0,
@@ -66,6 +65,17 @@ const darkTheme = createTheme({
 		subtitle1: {
 			fontSize: '1.375rem',
 			color: '#a5a5a5',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '1rem',
+			},
+		},
+		overline: {
+			fontSize: '1.375rem',
+			color: '#ffffff',
+			textTransform: 'capitalize',
+			fontWeight: 600,
+			lineHeight: 1.66,
 			margin: 0,
 			'@media (min-width:600px)': {
 				fontSize: '1rem',

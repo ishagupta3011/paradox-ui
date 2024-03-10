@@ -143,11 +143,48 @@
 	min-height: 19.81rem;
 }
 
+.dark-grey-rectangle-card {
+	background-color: #212121;
+	border: 5px transparent;
+	border-radius: 0.75rem;
+	min-height: 5.81rem;
+}
+
 .card-padding {
 	padding: 0.75rem 1rem;
+}
+
+.dark-grey-card-padding {
+	padding: 0.5rem 0.75rem;
+	padding-top: 0.75rem;
+	padding-bottom: 0.25rem;
 }
 
 // Border styles
 .white-bottom-border {
 	border-bottom: 2px solid #ffffff;
+}
+
+.white-bottom-border-light {
+	border-bottom: 1px solid #ffffff;
+}
+
+// Font colors
+.red-font {
+	color: $red-text-color;
+}
+
+.green-font {
+	color: $green-text-color;
+}
+
+// Background Circle
+.white-bg-circle {
+	border-radius: 50%;
+	background-color: #ffffff;
+	height: 2.5rem;
+	width: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
