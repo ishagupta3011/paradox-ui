@@ -39,13 +39,37 @@ const darkTheme = createTheme({
 			},
 		},
 		h4: {
-			fontSize: '1.675rem',
-			letterSpacing: '0.175rem',
+			fontSize: '1.875rem',
 			fontWeight: 600,
 			color: '#ffffff',
 			margin: 0,
 			'@media (min-width:600px)': {
-				fontSize: '1rem',
+				fontSize: '1.2rem',
+			},
+		},
+		h4Grey: {
+			fontSize: '1.875rem',
+			fontWeight: 600,
+			color: '#d2d2d2',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '1.2rem',
+			},
+		},
+		h4Light: {
+			fontSize: '1.875rem',
+			color: '#d2d2d2',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '1.2rem',
+			},
+		},
+		h5: {
+			fontSize: '1.25rem',
+			color: '#ffffff',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '0.875rem',
 			},
 		},
 		body2: {
@@ -66,6 +90,25 @@ const darkTheme = createTheme({
 		subtitle1: {
 			fontSize: '1.375rem',
 			color: '#a5a5a5',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '1rem',
+			},
+		},
+		subtitle2: {
+			fontSize: '1.375rem',
+			color: '#ffffff',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '1rem',
+			},
+		},
+		overline: {
+			fontSize: '1.375rem',
+			color: '#ffffff',
+			textTransform: 'capitalize',
+			fontWeight: 600,
+			lineHeight: 1.66,
 			margin: 0,
 			'@media (min-width:600px)': {
 				fontSize: '1rem',
