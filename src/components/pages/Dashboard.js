@@ -72,7 +72,8 @@ export default function Dashboard() {
 			collectionName:'Test 3',
 			items:'2132',
 			activeCollaterals:'23',
-		}
+		},
+		
 		])
 	}
 
