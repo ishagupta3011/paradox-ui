@@ -20,6 +20,9 @@ export default function Dashboard() {
 			percentValue:'11.82%',},
 			{depositAPR:'Transforming illiquid NFTs into liquid ERC-20 assets',
 			borrowAPR:'Interest to be prided',
+			percentValue:'11.82%',},
+			{depositAPR:'Transforming illiquid NFTs into liquid ERC-20 assets',
+			borrowAPR:'Interest to be prided',
 			percentValue:'11.82%',}
 		]);
 
@@ -42,6 +45,18 @@ export default function Dashboard() {
 			nftId:'24677',
 			nftRiskFactor:'1.04',
 			nftName:'MAYC'
+		},
+		{
+			nftIconUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=identicon&r=x',
+			nftId:'24677',
+			nftRiskFactor:'1.04',
+			nftName:'MAYC'
+		},
+		{
+			nftIconUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=identicon&r=x',
+			nftId:'24677',
+			nftRiskFactor:'1.04',
+			nftName:'MAYC'
 		}])
 	},[])
 
@@ -50,8 +65,8 @@ export default function Dashboard() {
 	}
 	return <main>
 	<div className='second-section'>
-		<div className='nft-bridge-card'>
-		<div className='header'>NFT liquidity bridge</div>
+		<div className='nft-bridge-card container-card w-60'>
+		<div className='data-card-heading'>NFT liquidity bridge</div>
 		<div className='bridge-content'>
 		<div className='left-panel'>
 			<img src= {reserveLogo}></img>
@@ -80,8 +95,8 @@ export default function Dashboard() {
 		</div>
 		</div>
 		</div>
-		<div className='risk-factor'> 
-		<div className='header'>Risk factor</div>
+		<div className='risk-factor container-card w-40'> 
+		<div className='data-card-heading'>Risk factor</div>
 		{
 			riskFactorData.length>0 ?<div className='risk-factor-content'>
 				{riskFactorData.map((data)=>{
