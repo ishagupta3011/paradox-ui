@@ -17,6 +17,10 @@
 	justify-content: center;
 }
 
+.justify-content-space-between {
+	justify-content: space-between;
+}
+
 // Scroll
 ::-webkit-scrollbar {
 	width: 7px;
@@ -124,4 +128,26 @@
 	line-height: 27px;
 	margin: 1rem;
 	font-family: 'Courier Prime';
+}
+
+.grey-card {
+	background-color: #484848;
+	border: 5px transparent;
+	border-radius: 0.75rem;
+}
+
+.dark-grey-card {
+	background-color: #212121;
+	border: 5px transparent;
+	border-radius: 0.75rem;
+	min-height: 19.81rem;
+}
+
+.card-padding {
+	padding: 0.75rem 1rem;
+}
+
+// Border styles
+.white-bottom-border {
+	border-bottom: 2px solid #ffffff;
 }
