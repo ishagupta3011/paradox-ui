@@ -119,7 +119,7 @@ export default function YieldFarmingA() {
 						<Typography variant='h4'>
 							Create Bundle
 						</Typography>
-						<div className='w-10 '>
+						<div className='w-20'>
 							<AppDropdown
 								items={bundleList}
 								labelId={'bundle-select-label'}
@@ -174,7 +174,7 @@ export default function YieldFarmingA() {
 				</div>
 				<div className='app-flex justify-content-space-between mb-2'>
 					<Typography variant='h4'>Statistics</Typography>
-					<div className='w-10 '>
+					<div className='w-20'>
 						<AppDropdown
 							items={recentList}
 							labelId={'recent-select-label'}
@@ -184,7 +184,7 @@ export default function YieldFarmingA() {
 						/>
 					</div>
 				</div>
-				<div className='app-flex flex-wrapper gap-2'>
+				<div className='app-flex flex-wrapper gap-2 justify-content-center'>
 					<ValueCard
 						icon={<ValueStacked />}
 						title={'Total Value Stacked'}
