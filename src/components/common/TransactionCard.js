@@ -83,7 +83,7 @@ export default function TransactionCard(props) {
 			container
 			spacing={1}
 			alignItems={'center'}
-			className='dark-grey-rectangle-card card-padding'>
+			className='dark-grey-rectangle-card card-padding m-0 w-auto'>
 			<Grid item md={2} className='p-0'>
 				<div className='white-bg-circle'>
 					{icon === 'trend' ? <TrendIcon /> : <StackedIcon />}
