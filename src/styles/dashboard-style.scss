@@ -3,11 +3,14 @@
 
 
 main {
+    color:#ffffff;
     .second-section {
         display: flex;
         gap: 1rem;
-    }
+
     .nft-bridge-card {
+      
+
         .bridge-content {
             display: flex;
             gap: 1rem;
@@ -134,5 +137,9 @@ main {
 
         }
     }
-
+}
+.collection-sections{
+    display: flex;
+    gap: 1rem;
+}
 }

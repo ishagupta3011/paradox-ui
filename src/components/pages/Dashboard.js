@@ -4,12 +4,77 @@ import reserveLogo from '../../images/reserve.svg';
 
 import AppButton from '../../components/common/AppButton';
 
+import Collections from '../ui-card-components/Collections';
+
 import '../../styles/dashboard-style.scss';
 
 export default function Dashboard() {
 	const [liquidityBridgeData, setLiquidityBridgeData] = useState([]);
 
 	const [riskFactorData, setRiskFactorData] = useState([]);
+
+	const [supportedCollections,setSupportedCollections] =useState([]);
+
+	const [creatorsCollections, setCreatorsCollections] =useState([]);
+
+
+		//function to set supported collections
+	const updateSupportedCollections =() =>{
+		setSupportedCollections([{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=robohash&r=x',
+			collectionName:'BoredApeYachtClub',
+			items:'3123',
+			activeCollaterals:'3232',
+		},
+		{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=monsterid&r=x',
+			collectionName:'Test 1',
+			items:'21221',
+			activeCollaterals:'2133',
+		},
+		{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=monsterid&r=x',
+			collectionName:'Test 2',
+			items:'21221',
+			activeCollaterals:'213',
+		},
+		{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=monsterid&r=x',
+			collectionName:'Test 3',
+			items:'2132',
+			activeCollaterals:'23',
+		}
+		])
+	}
+
+	//function to set creators collections
+	const updateCreatorsCollections =() =>{
+		setCreatorsCollections([{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=monsterid&r=x',
+			collectionName:'Test You Elippsis out',
+			items:'2122',
+			activeCollaterals:'21',
+		},
+		{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=monsterid&r=x',
+			collectionName:'Test 1',
+			items:'21221',
+			activeCollaterals:'2133',
+		},
+		{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=monsterid&r=x',
+			collectionName:'Test 2',
+			items:'21221',
+			activeCollaterals:'213',
+		},
+		{
+			collectionUrl:'https://gravatar.com/avatar/bbfdb9bbd0c011978359c4d7b498d8de?s=400&d=monsterid&r=x',
+			collectionName:'Test 3',
+			items:'2132',
+			activeCollaterals:'23',
+		}
+		])
+	}
 
 	useEffect(() => {
 		// write logic to set liuidity bridgeData
@@ -67,7 +132,9 @@ export default function Dashboard() {
 			nftId: '24677',
 			nftRiskFactor: '1.04',
 			nftName: 'MAYC'
-		}])
+		}]);
+		updateCreatorsCollections();
+		updateSupportedCollections();
 	}, [])
 
 	const depositNFTHandler = () => {
@@ -135,6 +202,10 @@ export default function Dashboard() {
 				<div className='app-flex justify-content-center'>
 					<AppButton text={'Risk factor'} minWidth={'70%'} variant={'primary'} clickHandler={riskFactorButtonClickHandler}></AppButton></div>
 			</div>
+		</div>
+		<div className='collection-sections'>
+		<Collections title={'Supported Collections'} data={supportedCollections}></Collections>
+		<Collections title={'Creators Collections'} data={creatorsCollections}></Collections>
 		</div>
 	</main>
 }
