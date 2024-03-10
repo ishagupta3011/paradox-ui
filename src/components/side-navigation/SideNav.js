@@ -5,7 +5,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import { styled } from '@mui/material/styles';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { DRAWER_WIDTH, MENU_ITEMS } from '../../constants/sideNavConstants';
 import logo from './HeaderLogo.png';
@@ -13,9 +13,19 @@ import logo from './HeaderLogo.png';
 export default function SideNav(props) {
 	const navigate = useNavigate();
 
-	const { open, handleSideNavClick } = props;
+	const { open, handleSideNavClick, handleMenuItemChange } = props;
 
 	const [isActive, setIsActive] = useState('a');
+
+	useEffect(() => {
+		const pathname = window.location.pathname;
+		const index = MENU_ITEMS.findIndex(
+			(item) => item.navPath === pathname
+		);
+		if (index > -1) {
+			setIsActive(MENU_ITEMS[index].item);
+		}
+	}, []);
 
 	const DrawerHeader = styled('div')(({ theme }) => ({
 		display: 'flex',
@@ -29,6 +39,7 @@ export default function SideNav(props) {
 	const handleMenuItemClick = (item) => {
 		setIsActive(item.item);
 		navigate(item.navPath);
+		handleMenuItemChange();
 	};
 
 	return (

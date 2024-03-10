@@ -2,6 +2,14 @@
 	padding-top: 1rem;
 	padding-left: 1rem;
 	padding-bottom: 1rem;
+	background-color: #242424;
+	border: 1px solid #888888;
+	max-height: 10%;
+}
+
+.dashboard-header {
+	max-height: 40%;
+	border: none;
 	background: rgb(0, 0, 0);
 	background: linear-gradient(
 		1800deg,
@@ -9,7 +17,6 @@
 		rgba(36, 36, 36, 1) 42%,
 		rgba(146, 146, 146, 1) 100%
 	);
-	max-height: 45vh;
 }
 
 .profile-wrapper {
@@ -24,5 +31,5 @@
 
 .value-staked-card {
 	width: 90%;
-	height: 14.313rem;
+	height: 12.313rem;
 }

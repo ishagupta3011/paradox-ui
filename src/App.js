@@ -30,6 +30,14 @@ const darkTheme = createTheme({
 				fontSize: '2.75rem',
 			},
 		},
+		h3: {
+			fontSize: '2.675rem',
+			color: '#ffffff',
+			margin: 0,
+			'@media (min-width:600px)': {
+				fontSize: '2rem',
+			},
+		},
 		h4: {
 			fontSize: '1.675rem',
 			letterSpacing: '0.175rem',
