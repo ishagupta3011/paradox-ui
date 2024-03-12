@@ -59,7 +59,7 @@ export default function YieldFarmingB() {
 						<Typography noWrap variant='h4'>
 							Liquidty Mining
 						</Typography>
-						<div className='w-10'>
+						<div className='w-30'>
 							<AppDropdown
 								items={bundleList}
 								labelId={'liuidity-select-label'}
@@ -90,7 +90,7 @@ export default function YieldFarmingB() {
 							<Typography noWrap variant='h4'>
 								Total value Staked
 							</Typography>
-							<div className='w-20'>
+							<div className='w-30'>
 								<AppDropdown
 									items={bundleList}
 									labelId={'recent-select-label'}
@@ -109,7 +109,7 @@ export default function YieldFarmingB() {
 							<Typography noWrap variant='h4'>
 								Statistics
 							</Typography>
-							<div className='w-20'>
+							<div className='w-30'>
 								<AppDropdown
 									items={bundleList}
 									labelId={'stats-select-label'}
