@@ -12,6 +12,7 @@ const darkTheme = createTheme({
 	typography: {
 		fontSize: 12,
 		fontFamily: 'Courier Prime',
+		width: 'inherit',
 		h1: {
 			fontSize: '4.125rem',
 			letterSpacing: '0.375rem',
@@ -78,6 +79,23 @@ const darkTheme = createTheme({
 			margin: 0,
 			'@media (min-width:600px)': {
 				fontSize: '0.875rem',
+			},
+		},
+		label: {
+			fontSize: '1.875rem',
+			fontWeight: 600,
+			color: '#ffffff',
+			margin: 0,
+			'&::after': {
+				content: '"*"',
+				display: 'inline-block',
+				color: '#f62525',
+				fontSize: '12px',
+				marginTop: '-8px',
+				marginLeft: '8px',
+			},
+			'@media (min-width:600px)': {
+				fontSize: '1.2rem',
 			},
 		},
 		body2: {

@@ -3,18 +3,32 @@ import Chip from '@mui/material/Chip';
 import React from 'react';
 
 export default function AmountCard(props) {
-	const { amount, balance, tagName, showChip, chipLabel, isOutline=true } = props;
+	const {
+		amount,
+		balance,
+		tagName,
+		showChip,
+		chipLabel,
+		isOutline = true,
+	} = props;
 
 	return (
-		<div className={`black-gradient-card ${isOutline && 'white-outline'}`}>
+		<div
+			className={`black-gradient-card ${
+				isOutline && 'white-outline'
+			}`}>
 			<div className='app-flex justify-content-space-between mb-0-5'>
-				<Typography variant='overline'>Amount</Typography>
-				<Typography variant='overline'>
+				<Typography noWrap variant='overline'>
+					Amount
+				</Typography>
+				<Typography noWrap variant='overline'>
 					Balance: {balance}
 				</Typography>
 			</div>
 			<div className='app-flex justify-content-space-between'>
-				<Typography variant='overline'>{amount}</Typography>
+				<Typography noWrap variant='overline'>
+					{amount}
+				</Typography>
 				<div className='app-flex'>
 					{showChip && (
 						<Chip
@@ -29,7 +43,9 @@ export default function AmountCard(props) {
 							}}
 						/>
 					)}
-					<Typography variant='h5'>{tagName}</Typography>
+					<Typography noWrap variant='h5'>
+						{tagName}
+					</Typography>
 				</div>
 			</div>
 		</div>

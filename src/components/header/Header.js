@@ -95,8 +95,10 @@ function DashboardHeader(props) {
 			justifyContent='space-around'
 			className='mt-1 pl-2 pb-1'>
 			<Grid item md={8.8} className='p-0'>
-				<Typography variant='h1'>Liquidity for NFTs</Typography>
-				<Typography variant='body2'>
+				<Typography noWrap variant='h1'>
+					Liquidity for NFTs
+				</Typography>
+				<Typography noWrap variant='body2'>
 					Transferring illiquid <strong>NFTs</strong> into liquid{' '}
 					<strong>ERC-20 assets</strong>
 				</Typography>
@@ -107,20 +109,22 @@ function DashboardHeader(props) {
 			</Grid>
 			<Grid item md={3.2}>
 				<div className='gradient-card value-staked-card'>
-					<Typography variant='subtitle1'>
+					<Typography noWrap variant='subtitle1'>
 						Total Value Staked
 					</Typography>
-					<Typography className='mb-1' variant='h2'>
+					<Typography noWrap className='mb-1' variant='h2'>
 						{totalValue}
 					</Typography>
-					<Typography variant='subtitle1'>
+					<Typography noWrap variant='subtitle1'>
 						Total Value Staked
 					</Typography>
 					<div className='app-flex align-items-baseline'>
-						<Typography variant='h2'>
+						<Typography noWrap variant='h2'>
 							{totalRevenue}
 						</Typography>
-						<Typography variant='h4'>{' ETH'}</Typography>
+						<Typography noWrap variant='h4'>
+							{' ETH'}
+						</Typography>
 					</div>
 				</div>
 			</Grid>
@@ -174,7 +178,9 @@ export default function Header(props) {
 						{isDashboard ? (
 							<AppLogo />
 						) : (
-							<Typography variant='h3'>{title}</Typography>
+							<Typography noWrap variant='h3'>
+								{title}
+							</Typography>
 						)}
 					</Grid>
 				</Grid>

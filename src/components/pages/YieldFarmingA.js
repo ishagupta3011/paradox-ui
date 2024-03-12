@@ -116,7 +116,7 @@ export default function YieldFarmingA() {
 			<Grid item md={8.5} className='p-0'>
 				<div className='container-card mb-2'>
 					<div className='app-flex justify-content-space-between'>
-						<Typography variant='h4'>
+						<Typography noWrap variant='h4'>
 							Create Bundle
 						</Typography>
 						<div className='w-20'>
@@ -131,6 +131,7 @@ export default function YieldFarmingA() {
 					</div>
 					<div className='grey-gradient-card mb-2'>
 						<Typography
+							noWrap
 							variant='subtitle2'
 							className='mb-0-5'>
 							Select Pair to Bundle with
@@ -173,7 +174,9 @@ export default function YieldFarmingA() {
 					/>
 				</div>
 				<div className='app-flex justify-content-space-between mb-2'>
-					<Typography variant='h4'>Statistics</Typography>
+					<Typography noWrap variant='h4'>
+						Statistics
+					</Typography>
 					<div className='w-20'>
 						<AppDropdown
 							items={recentList}
@@ -222,7 +225,7 @@ export default function YieldFarmingA() {
 				<div className='container-card h-100'>
 					<div className='grey-card mb-2'>
 						<div className='app-flex justify-content-space-between white-bottom-border card-padding'>
-							<Typography variant='h4'>
+							<Typography noWrap variant='h4'>
 								Overview
 							</Typography>
 							<MenuPanel
@@ -235,17 +238,23 @@ export default function YieldFarmingA() {
 						<div className='card-padding'>
 							<div className='dark-grey-card'>
 								<div className='dark-grey-card-padding white-bottom-border-light'>
-									<Typography variant='overline'>
+									<Typography
+										noWrap
+										variant='overline'>
 										Your Balance
 									</Typography>
 								</div>
 								<div className='card-padding'>
 									{BALANCE_LIST.map((item) => (
 										<div className='app-flex justify-content-space-between'>
-											<Typography variant='overline'>
+											<Typography
+												noWrap
+												variant='overline'>
 												{item.item}
 											</Typography>
-											<Typography variant='overline'>
+											<Typography
+												noWrap
+												variant='overline'>
 												{
 													balancedDetails[
 														item
@@ -260,7 +269,9 @@ export default function YieldFarmingA() {
 						</div>
 					</div>
 					<div className='app-flex justify-content-space-between'>
-						<Typography variant='h4'>Transactions</Typography>
+						<Typography noWrap variant='h4'>
+							Transactions
+						</Typography>
 						<MenuPanel
 							menuItems={transactionItems}
 							onSelection={handleTransactionsItemSelection}

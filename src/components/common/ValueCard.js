@@ -23,13 +23,15 @@ export default function ValueCard(props) {
 			className={`container-card ${widthClass} p-2 value-card-height app-flex-col`}>
 			<div className='app-flex gap-2'>
 				<div className='white-bg-circle'>{icon}</div>
-				<Typography variant={isTitleHighlighted ? 'h4' : 'h4Grey'}>
+				<Typography
+					noWrap
+					variant={isTitleHighlighted ? 'h4' : 'h4Grey'}>
 					{title}
 				</Typography>
 			</div>
 			<div>
 				{showOnlyAmount && (
-					<Typography variant='h4Light'>
+					<Typography noWrap variant='h4Light'>
 						{'$'}
 						{amount}
 					</Typography>
@@ -37,31 +39,34 @@ export default function ValueCard(props) {
 				{showOnlyProgressBar && <ProgressBar progress={progress} />}
 				{showAmountAndProgressBar && (
 					<div className='app-flex justify-content-space-between gap-2'>
-						<Typography variant='h4Light' className='w-40'>
+						<Typography
+							noWrap
+							variant='h4Light'
+							className='w-40'>
 							{'$'}
 							{amount}
 						</Typography>
 						<div className='w-60'>
-						<ProgressBar progress={progress} />
+							<ProgressBar progress={progress} />
 						</div>
 					</div>
 				)}
 				{showAmountLabels && (
 					<div>
 						<div className='app-flex justify-content-space-between'>
-							<Typography variant='subtitle2'>
+							<Typography noWrap variant='subtitle2'>
 								PDX
 							</Typography>
-							<Typography variant='subtitle2'>
+							<Typography noWrap variant='subtitle2'>
 								ETH
 							</Typography>
 						</div>
 						<div className='app-flex justify-content-space-between'>
-							<Typography variant='h4Light'>
+							<Typography noWrap variant='h4Light'>
 								{'$'}
 								{pdx}
 							</Typography>
-							<Typography variant='h4Light'>
+							<Typography noWrap variant='h4Light'>
 								{'$'}
 								{eth}
 							</Typography>

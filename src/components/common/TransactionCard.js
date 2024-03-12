@@ -90,11 +90,13 @@ export default function TransactionCard(props) {
 				</div>
 			</Grid>
 			<Grid item md={9} className='p-0'>
-				<Typography variant='overline'>
+				<Typography noWrap variant='overline'>
 					{count}
 					{' LPDX'}
 				</Typography>
-				<Typography variant='body1'>{title}</Typography>
+				<Typography noWrap variant='body1'>
+					{title}
+				</Typography>
 			</Grid>
 			<Grid
 				item
